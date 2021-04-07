@@ -13,10 +13,10 @@ public class MachineLearningModel {
 	private Classifier cls;
 	private String modelName;
 		
-	public void loadModel() {
+	public void loadModel(String path) {
 		
 		//choose and load model
-		this.modelName = new String("src/main/resources/iris_rf.model");
+		this.modelName = new String(path);
 		
 		try {
 			this.cls = (Classifier) SerializationHelper.read(modelName);
